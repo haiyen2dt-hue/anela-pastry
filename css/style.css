@@ -104,7 +104,7 @@ h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.22rem; lin
   box-shadow: 0 16px 40px -24px rgba(140, 70, 50, .45);
 }
 .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; flex: none; }
-.brand img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
+.brand img { width: 42px; height: 42px; border-radius: 6px; object-fit: cover; }
 .brand span { font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; }
 .brand em { font-weight: 500; color: var(--accent); }
 .links { display: flex; gap: .2rem; }
@@ -204,7 +204,7 @@ body.phang .aurora { display: none; }
 
 .kicker { font-size: .78rem; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
 .kicker b { color: var(--accent); font-weight: 600; }
-.story h2 em, .pull em, .visit h2 em { font-style: italic; color: var(--accent); }
+.story h2 em, .visit h2 em { font-style: italic; color: var(--accent); }
 
 /* Màn hình đầu trang chủ: ảnh nền toàn màn hình.
    Ảnh gốc (hero-ngang.jpg) nằm sát phải, cao vừa màn hình nên luôn thấy trọn hai chiếc bánh, không phóng to;
@@ -275,7 +275,6 @@ body.phang .aurora { display: none; }
 .ve-noi { max-width: 520px; }
 .ve-noi h2 { font-weight: 500; font-size: clamp(2.4rem, 5vw, 4rem); margin-bottom: 1.2rem; }
 .ve-noi p { font-size: 1.05rem; line-height: 1.8; color: #5A3A30; }
-.ve-noi .btn { margin-top: 1.8rem; }
 
 /* Bộ sưu tập: ảnh vuông, tên ở giữa, nút xem */
 .toc-khoi { padding-top: 4.5rem; scroll-margin-top: 20px; }
@@ -338,9 +337,6 @@ body.phang .aurora { display: none; }
 .story .body { margin-top: 1.1rem; max-width: 48ch; color: var(--muted); }
 .origin { font-family: var(--font-display); font-style: italic; font-size: 1.08rem; line-height: 1.6; }
 
-.pull { text-align: center; padding-block: 6rem 1rem; }
-.pull blockquote { margin: 0 auto; max-width: 24ch; font-family: var(--font-display); font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.22; }
-.pull cite { display: block; margin-top: 1.4rem; font-style: normal; font-size: .78rem; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
 
 
 .visit { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(2rem, 6vw, 5rem); padding-top: 2.4rem; }
@@ -492,7 +488,7 @@ dialog.modal::backdrop { background: rgba(58, 34, 29, .45); backdrop-filter: blu
 .site-footer { margin-top: 3rem; padding-block: 1.6rem; background: rgba(255, 252, 248, .9); border-top: 1px solid var(--line); }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; font-size: .85rem; color: var(--muted); }
 .footer-brand { display: flex; align-items: center; gap: .8rem; }
-.footer-brand img { width: 46px; height: 46px; border-radius: 50%; }
+.footer-brand img { width: 46px; height: 46px; border-radius: 6px; }
 .footer-brand b { display: block; color: var(--fg); font-size: .95rem; }
 .site-footer a { color: var(--accent); }
 
@@ -552,7 +548,6 @@ dialog.modal::backdrop { background: rgba(58, 34, 29, .45); backdrop-filter: blu
   .story:nth-child(even) .story-img { order: 0; }
   .story-img .thumb { aspect-ratio: 4 / 3; }
   .story-img .thumb svg.cake { width: 58%; }
-  .pull { padding-block: 4rem 0; }
   .visit-list > div { grid-template-columns: 1fr auto; }
   .visit-list dt { grid-column: 1 / -1; }
 }
