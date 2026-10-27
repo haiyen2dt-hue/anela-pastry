@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đơn hàng của tôi – Anela Pastry</title>
+  <meta name="description" content="Tra cứu đơn đặt bánh tại Anela Pastry.">
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="orders">
+  <div id="site-header"></div>
+
+  <main>
+    <div class="page-hero">
+      <div class="wrap">
+        <div class="crumbs"><a href="index.html">Trang chủ</a> / Đơn hàng của tôi</div>
+        <h1>Đơn hàng <span class="grad">của tôi</span></h1>
+        <p>Xem lại các đơn bạn đã đặt trên thiết bị này, tra theo mã đơn hoặc số điện thoại.</p>
+      </div>
+    </div>
+
+    <section class="page-body">
+      <div class="wrap"><div class="orders-body">
+        <form class="lookup" id="lookup-form" role="search">
+          <label class="sr-only" for="lq">Mã đơn hoặc số điện thoại</label>
+          <input id="lq" class="input" name="q" placeholder="Nhập mã đơn (VD: AN1A2B3C) hoặc số điện thoại">
+          <button class="btn btn-primary btn-sm" type="submit">Tra cứu</button>
+        </form>
+        <h2 id="orders-heading"></h2>
+        <div id="orders-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

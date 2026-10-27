@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đánh giá – Anela Pastry</title>
+  <meta name="description" content="Đánh giá của khách hàng về bánh Anela Pastry.">
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="reviews">
+  <div id="site-header"></div>
+
+  <main>
+    <div class="page-hero">
+      <div class="wrap">
+        <div class="crumbs"><a href="index.html">Trang chủ</a> / Đánh giá</div>
+        <h1>Khách nói gì về <span class="grad">Anela</span></h1>
+        <p>Cảm nhận của khách hàng về bánh Anela. Bạn đã thử bánh? Chia sẻ cùng Anela nhé!</p>
+      </div>
+    </div>
+
+    <section class="page-body">
+      <div class="wrap review-layout">
+        <aside>
+          <div class="panel rating-summary" id="rating-summary"></div>
+          <form class="panel" id="review-form">
+            <h2>Viết đánh giá</h2>
+            <div class="field">
+              <span class="field-label">Chấm điểm <span class="req">*</span></span>
+              <div class="star-input" role="radiogroup" aria-label="Số sao">
+                <input type="radio" id="s5" name="rating" value="5" required><label for="s5" title="5 sao">★</label>
+                <input type="radio" id="s4" name="rating" value="4"><label for="s4" title="4 sao">★</label>
+                <input type="radio" id="s3" name="rating" value="3"><label for="s3" title="3 sao">★</label>
+                <input type="radio" id="s2" name="rating" value="2"><label for="s2" title="2 sao">★</label>
+                <input type="radio" id="s1" name="rating" value="1"><label for="s1" title="1 sao">★</label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="r-name">Tên của bạn <span class="req">*</span></label>
+              <input id="r-name" class="input" name="fullname" required maxlength="60">
+            </div>
+            <div class="field">
+              <label for="r-product">Bánh bạn đã mua</label>
+              <select id="r-product" class="input" name="product"></select>
+            </div>
+            <div class="field">
+              <label for="r-text">Cảm nhận <span class="req">*</span></label>
+              <textarea id="r-text" class="input" name="text" required maxlength="600" placeholder="Bánh có ngon không, giao có đúng hẹn không…"></textarea>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">Gửi đánh giá</button>
+          </form>
+        </aside>
+        <div id="review-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
