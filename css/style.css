@@ -259,8 +259,26 @@ body.phang .aurora { display: none; }
   .nav.tren-anh .links a:hover, .nav.tren-anh .links a.active { color: #fff; background: none; border-bottom-color: #fff; }
 }
 
+/* Về Chúng Tôi: ảnh bánh làm nền, chữ đặt trên phần nền trống bên trái */
+.ve-khoi { padding-top: 4.5rem; scroll-margin-top: 20px; }
+.ve-chung-toi {
+  position: relative; isolation: isolate; display: flex; align-items: center; min-height: 540px;
+  padding: clamp(2rem, 6vw, 5rem); border-radius: 6px; overflow: hidden; background: #E9CBA6;
+}
+.ve-chung-toi::before, .ve-chung-toi::after { content: ""; position: absolute; inset: 0; z-index: -1; }
+/* Ảnh nằm 2/3 bên phải, mép trái mờ dần vào nền */
+.ve-chung-toi::before {
+  left: auto; width: 66%; background: url("../images/ve-chung-toi.jpg") center 62% / cover no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 30%); mask-image: linear-gradient(90deg, transparent 0, #000 30%);
+}
+.ve-chung-toi::after { background: linear-gradient(90deg, rgba(251, 240, 228, .9) 0%, rgba(251, 240, 228, .72) 34%, rgba(251, 240, 228, 0) 58%); }
+.ve-noi { max-width: 520px; }
+.ve-noi h2 { font-weight: 500; font-size: clamp(2.4rem, 5vw, 4rem); margin-bottom: 1.2rem; }
+.ve-noi p { font-size: 1.05rem; line-height: 1.8; color: #5A3A30; }
+.ve-noi .btn { margin-top: 1.8rem; }
+
 /* Bộ sưu tập: ảnh vuông, tên ở giữa, nút xem */
-.toc-khoi { padding-top: 4rem; scroll-margin-top: 20px; }
+.toc-khoi { padding-top: 4.5rem; scroll-margin-top: 20px; }
 .toc-khoi .rule { margin-top: 0; }
 .toc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem 2rem; text-align: center; }
 .toc-item { display: block; text-decoration: none; }
@@ -517,7 +535,11 @@ dialog.modal::backdrop { background: rgba(58, 34, 29, .45); backdrop-filter: blu
 @media (max-width: 760px) {
   .hero-anh-noi { padding-block: 7rem 5.5rem; }
   .hero-quote { font-size: 1rem; }
-  .toc-khoi { padding-top: 3.5rem; }
+  .toc-khoi { padding-top: 3rem; }
+  .ve-khoi { padding-top: 2.5rem; }
+  .ve-chung-toi { min-height: 0; padding: 2rem 1.4rem 18rem; }
+  .ve-chung-toi::before { top: auto; width: 100%; height: 62%; -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 35%); mask-image: linear-gradient(180deg, transparent 0, #000 35%); }
+  .ve-chung-toi::after { background: linear-gradient(180deg, rgba(251, 240, 228, .92) 0%, rgba(251, 240, 228, .8) 50%, rgba(251, 240, 228, 0) 75%); }
   .toc { gap: 2rem .9rem; }
   .toc-item b { font-size: 1.05rem; }
   .toc-item small { font-size: .8rem; }
